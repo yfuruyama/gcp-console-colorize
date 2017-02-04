@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "GCP Header Color Changer",
-  "description": "...",
+  "name": "GCP console colorize",
+  "description": "Change GCP console color",
   "version": "1.0",
   "content_scripts": [
     {
@@ -18,7 +18,6 @@
     "chrome_style": true
   },
   "permissions": [
-    "https://ajax.googleapis.com/",
     "storage",
     "webNavigation"
   ]
