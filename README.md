@@ -1,7 +1,7 @@
 gcp-console-colorize
 ===
 
-Chrome extension for changing GCP console header color with your favorite color.
+Chrome extension for changing GCP console header color with your favorite one.
 
 ![screenshot](https://raw.github.com/addsict/gcp-console-colorize/master/image/gcp-console-colorize.png)
 
