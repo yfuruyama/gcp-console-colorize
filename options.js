@@ -2,21 +2,22 @@ function addCondition(condition) {
   var $table = $('#conditions');
   var $condition = $('<tr class="condition">');
   var $pattern = $('<td><input type="text" placeholder="pattern" class="pattern"></input></td>');
-  var $color = $('<td><input type="text" class="color" style="background-color: rgb(255, 0, 0)"></input></td>');
+  var $color = $('<td><input type="text" class="color"></input></td>');
   var $remove = $('<td><a href="#" id="remove">remove</a></td>');
 
   $condition.append($pattern);
   $condition.append($color);
   $condition.append($remove);
 
-  var pickerColor = new Colors({
-    // color: 'rgb(32, 100, 227)',
-  });
+  var colorRgb = 'rgb(32, 100, 227)'; // initial color
   if (condition) {
     $pattern.find('.pattern')[0].value = condition.pattern;
-    // pickerColor = Colors({
-      // color: 'rgb(' + condition.color. + ')';
-    // });
+
+    var colorRgb = 'rgb(' + condition.color.r + ', '
+                          + condition.color.g + ', '
+                          + condition.color.b + ')';
+    $color.find('.color')[0].style.backgroundColor = colorRgb;
+    $color.find('.color')[0].value = colorRgb;
   }
   $condition.append($remove);
   $table.append($condition);
@@ -26,9 +27,6 @@ function addCondition(condition) {
     $condition.remove();
   });
   $('.color').colorPicker({
-    // color: pickerColor,
-    // color: 'rgb(32, 100, 227)',
-    color: 'rgb(100, 100, 227)',
     opacity: false,
     dark: '#fff',
     light: '#fff',
@@ -63,6 +61,12 @@ function saveConditions() {
 
   chrome.storage.sync.set(setting, function() {
     console.log('saved!');
+    var $container = $('#container');
+    var $message = $('<span>saved!</span>');
+    $container.append($message);
+    setTimeout(function() {
+      $message.remove();
+    }, 1000);
   });
 }
 

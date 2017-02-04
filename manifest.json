@@ -9,13 +9,17 @@
       "js": ["main.js"]
     }
   ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
   "options_ui": {
     "page": "options.html",
-    "chrome_style": false,
-    "open_in_tab": true
+    "chrome_style": true
   },
   "permissions": [
     "https://ajax.googleapis.com/",
-    "storage"
+    "storage",
+    "webNavigation"
   ]
 }
