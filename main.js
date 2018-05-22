@@ -29,7 +29,7 @@ function getCurrentHeader() {
   var hostname = window.location.hostname;
 
   if (hostname === 'console.cloud.google.com') {
-    header = document.querySelector('[md-theme=platform-bar]');
+    header = document.querySelector('[md-theme=platform-bar]') || document.querySelector('.pcc-platform-bar-blue');
   } else if (hostname === 'bigquery.cloud.google.com') {
     header = document.querySelector('#gb div.gb_kb');
   }
