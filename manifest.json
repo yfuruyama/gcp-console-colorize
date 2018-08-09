@@ -2,8 +2,8 @@
   "manifest_version": 2,
   "name": "GCP console colorize",
   "description": "Change GCP console color",
-  "author": "Yuuki Furuyama",
-  "version": "1.2",
+  "author": "Yuki Furuyama",
+  "version": "1.3",
   "icons": {
     "16": "icon/icon_16x16.png",
     "48": "icon/icon_48x48.png",
@@ -12,8 +12,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://console.cloud.google.com/*",
-        "https://bigquery.cloud.google.com/*"
+        "https://console.cloud.google.com/*"
       ],
       "js": ["main.js"]
     }
