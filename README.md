@@ -1,11 +1,9 @@
 gcp-console-colorize
 ===
 
-Chrome extension for changing header color for GCP console.
+A chrome extension to change the header color for GCP console.
 
-e.g.) Change header color to red for a production project.
-
-![screenshot](https://raw.github.com/addsict/gcp-console-colorize/master/image/gcp-console-colorize.png)
+![screenshot](https://raw.github.com/yfuruyama/gcp-console-colorize/master/image/gcp-console-colorize.png)
 
 ## Install
 
