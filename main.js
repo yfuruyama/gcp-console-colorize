@@ -14,7 +14,7 @@ function getCurrentProjectId() {
 }
 
 function getCurrentHeader() {
-  return document.querySelector('[md-theme=platform-bar]') || document.querySelector('.cfc-platform-bar-blue');
+  return document.querySelector('[md-theme=platform-bar]') || document.querySelector('.cfc-platform-bar-blue') || document.querySelector('.cfc-platform-bar-white.gm2-platform-bar');
 }
 
 function changeHeaderColor() {
