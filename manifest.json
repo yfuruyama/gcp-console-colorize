@@ -1,9 +1,9 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "GCP console colorize",
   "description": "Change GCP console color",
   "author": "Yuki Furuyama",
-  "version": "1.6",
+  "version": "1.7",
   "icons": {
     "16": "icon/icon_16x16.png",
     "48": "icon/icon_48x48.png",
