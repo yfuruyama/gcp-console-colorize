@@ -18,12 +18,11 @@
     }
   ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js",
+    "type": "module"
   },
   "options_ui": {
-    "page": "options.html",
-    "chrome_style": true
+    "page": "options.html"
   },
   "permissions": [
     "storage",
