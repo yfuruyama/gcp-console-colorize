@@ -14,7 +14,17 @@ function getCurrentProjectId() {
 }
 
 function getCurrentHeader() {
-  return document.querySelector('[md-theme=platform-bar]') || document.querySelector('.cfc-platform-bar-blue') || document.querySelector('.cfc-platform-bar-white.gm2-platform-bar') || document.querySelector('.cfc-platform-bar-container');
+  var shadowHost = document.querySelector(
+    'one-cloud-bar-widget mica-widget[widgetid="oneCloudBar"] [mica-container]'
+  );
+  var shadowRoot = shadowHost && shadowHost.shadowRoot;
+  // Fall back to document for older Console layouts without a shadow root.
+  var searchRoot = shadowRoot || document;
+
+  return searchRoot.querySelector('[md-theme=platform-bar]') ||
+    searchRoot.querySelector('.cfc-platform-bar-blue') ||
+    searchRoot.querySelector('.cfc-platform-bar-white.gm2-platform-bar') ||
+    searchRoot.querySelector('.cfc-platform-bar-container');
 }
 
 function changeHeaderColor() {
